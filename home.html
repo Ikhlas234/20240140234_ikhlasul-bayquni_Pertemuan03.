@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage | Chatbot Catering Makanan - Kelompok 3 Kelas A</title>
+  <meta name="description" content="Homepage website kelompok: ringkasan jurnal Rancang Bangun Aplikasi Chatbot pada Catering Makanan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <!-- Poin 1: CSS eksternal (terpisah dari style.css milik landing page) -->
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="home.html" class="brand">PAW &middot; Kelompok 3</a>
+      <nav aria-label="Navigasi homepage">
+        <ul class="nav-list">
+          <li><a href="#beranda" class="active">Beranda</a></li>
+          <li><a href="#fitur">Fitur</a></li>
+          <li><a href="#arsitektur">Arsitektur</a></li>
+          <li><a href="#tim">Tim</a></li>
+          <li><a href="index.html" class="nav-list__cta">Landing Page Jurnal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Poin 3: HERO -->
+    <section class="hero" id="beranda">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__tag">Jurnal Detika &bull; Vol. 6 No. 1 &bull; Desember 2025</p>
+          <h1>Chatbot yang menjawab pelanggan catering, kapan pun mereka bertanya.</h1>
+          <p class="hero__desc">
+            Ringkasan jurnal <strong>Rancang Bangun Aplikasi Chatbot pada Catering Makanan</strong>
+            karya Nugroho Aji Wicaksono dan Rina Fiati (Universitas Muria Kudus), dengan studi kasus
+            UMKM Catering Bu Sumiyati.
+          </p>
+          <div class="hero__actions">
+            <a href="index.html" class="btn btn--primary">Buka Landing Page Jurnal</a>
+            <a href="detika,+15814_page6-11.pdf" class="btn btn--ghost" target="_blank" rel="noopener">Lihat Jurnal (PDF)</a>
+          </div>
+        </div>
+
+        <!-- Simulasi chatbot sederhana (rule-based, sesuai konsep jurnal) -->
+        <div class="hero__visual">
+          <div class="chat" aria-label="Simulasi chatbot Catering Bu Sumiyati">
+            <div class="chat__head">
+              <span class="chat__avatar" aria-hidden="true">B</span>
+              <div>
+                <strong>Catering Bu Sumiyati</strong>
+                <small>Simulasi chatbot</small>
+              </div>
+            </div>
+            <div class="chat__body" id="chatBody" aria-live="polite">
+              <p class="msg msg--bot">Halo! Pilih pertanyaan di bawah, chatbot akan langsung menjawab.</p>
+            </div>
+            <div class="chat__opts">
+              <button type="button" data-q="Jam buka berapa?" data-a="Kami buka pukul 16.30 - 23.00.">Jam buka</button>
+              <button type="button" data-q="Lokasinya di mana?" data-a="Catering Bu Sumiyati berlokasi di Mlati Kidul RT 07 RW 01.">Lokasi</button>
+              <button type="button" data-q="Bagaimana cara memesan?" data-a="Isi form order dengan data pesanan Anda. Sistem memeriksa kelengkapannya, memproses order, lalu menampilkan hasil pemesanan.">Cara pesan</button>
+            </div>
+          </div>
+          <p class="chat__note">Demo sederhana untuk homepage, bukan chatbot asli dari jurnal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Angka dari jurnal -->
+    <section class="stats" aria-label="Angka penting dari jurnal">
+      <div class="container stats__grid">
+        <div><strong>87%</strong><span>akurasi klasifikasi intent</span></div>
+        <div><strong>2,3 detik</strong><span>rata-rata waktu respon</span></div>
+        <div><strong>4 lapisan</strong><span>arsitektur sistem</span></div>
+        <div><strong>3 jenis</strong><span>pengujian: whitebox, blackbox, UAT</span></div>
+      </div>
+    </section>
+
+    <!-- Poin 4: GRID FITUR -->
+    <section class="features" id="fitur">
+      <div class="container">
+        <h2>Apa yang membuat chatbot ini berbeda</h2>
+        <p class="section-desc">Enam poin utama dari jurnal, dari pendekatan hingga pengujiannya.</p>
+
+        <div class="feature-grid">
+          <article class="card card--featured">
+            <h3>Pendekatan hibrida</h3>
+            <p>Rule-based system menangani FAQ dan form pemesanan, sementara NLP memahami pertanyaan bebas dari pelanggan.</p>
+          </article>
+          <article class="card">
+            <h3>Naïve Bayes dan TF-IDF</h3>
+            <p>Algoritma klasifikasi intent dengan pembobotan kata TF-IDF, ditambah pengenalan entitas dari kalimat pengguna.</p>
+          </article>
+          <article class="card">
+            <h3>Tanpa instal aplikasi</h3>
+            <p>Berjalan langsung di browser Android maupun iOS lewat tombol chatbot di halaman website catering.</p>
+          </article>
+          <article class="card">
+            <h3>Siap terhubung ke WhatsApp</h3>
+            <p>Integration Layer menyediakan API gateway untuk kanal eksternal seperti WhatsApp.</p>
+          </article>
+          <article class="card">
+            <h3>Dikembangkan dengan Scrum</h3>
+            <p>Sprint 2 sampai 4 minggu: perencanaan, pengembangan, review, dan retrospective.</p>
+          </article>
+          <article class="card">
+            <h3>Diuji dari tiga sisi</h3>
+            <p>Whitebox untuk logika kode, blackbox untuk fungsi dan akurasi, UAT untuk kepuasan pengguna.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arsitektur 4 lapisan -->
+    <section class="arch" id="arsitektur">
+      <div class="container arch__inner">
+        <div class="arch__intro">
+          <h2>Arsitektur berlapis</h2>
+          <p>Setiap lapisan punya tugas sendiri sehingga sistem mudah dirawat dan dikembangkan. Pesan pelanggan mengalir dari atas ke bawah.</p>
+        </div>
+        <div class="layers">
+          <div class="layer layer--1"><strong>User Interface</strong><span>Widget chatbot di website dan dashboard admin</span></div>
+          <div class="layer layer--2"><strong>Processing</strong><span>Rule-based engine, NLP engine, dan Naïve Bayes classifier</span></div>
+          <div class="layer layer--3"><strong>Data</strong><span>Menu, template respons, riwayat percakapan, knowledge base</span></div>
+          <div class="layer layer--4"><strong>Integration</strong><span>API gateway ke WhatsApp dan layanan pihak ketiga</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tim -->
+    <section class="team" id="tim">
+      <div class="container">
+        <h2>Anggota Kelompok</h2>
+        <p class="section-desc">Kelompok 3 Kelas A, mata kuliah Pemrograman Berbasis Web.</p>
+        <div class="team-grid">
+          <article class="member">
+            <span class="member__avatar" aria-hidden="true">IF</span>
+            <h3>Ilham Fadhilah</h3>
+            <p class="member__nim">20200140100</p>
+            <p>Analisis Novelty, Struktur Semantic HTML &amp; Dokumentasi</p>
+          </article>
+          <article class="member">
+            <span class="member__avatar" aria-hidden="true">DR</span>
+            <h3>Danar Rohman Rozaqi</h3>
+            <p class="member__nim">20240140233</p>
+            <p>Analisis Kekuatan &amp; Kekurangan Jurnal</p>
+          </article>
+          <article class="member">
+            <span class="member__avatar" aria-hidden="true">MI</span>
+            <h3>M.Ikhlasul</h3>
+            <p class="member__nim">20240140234</p>
+            <p>Penyusunan Konten Ringkasan &amp; Styling CSS Minimal</p>
+          </article>
+          <article class="member">
+            <span class="member__avatar" aria-hidden="true">AA</span>
+            <h3>Anandya Arlys F</h3>
+            <p class="member__nim">20240140002</p>
+            <p>Pengembangan dan Penyempurnaan Halaman Web</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner">
+        <h2>Ingin membaca analisis lengkapnya?</h2>
+        <a href="index.html" class="btn btn--amber">Buka Landing Page Jurnal</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025/2026 Kelompok 3 Kelas A &ndash; Pemrograman Berbasis Web (PAW)</p>
+    </div>
+  </footer>
+
+  <script src="homepage.js"></script>
+</body>
+</html>
